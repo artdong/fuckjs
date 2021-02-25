@@ -2,6 +2,7 @@
 become stronger, say f*ck to js
 
 1. 求出如下题目结果 
+
 ```
 ({} + {}).length 
 ([] + []).length 
@@ -35,3 +36,13 @@ become stronger, say f*ck to js
 (3) (function() {}).length
 有了前两道题目的经验，那你可能会很自然的想到：这里的function也是会调用toString()方法的。如果你这样想，那就是被前两道题目误导了：函数的长度是其形参的个数，所以最终结果是0。
 ```
+
+2.以下哪条语句会产生运行错误：（A）
+
+A.var obj = ( );  // Uncaught SyntaxError: Unexpected token ')'
+
+B.var obj = [ ];  // [] 
+
+C.var obj = { };  // {} 
+
+D.var obj = / /;  // // 
