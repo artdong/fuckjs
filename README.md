@@ -46,3 +46,18 @@ B.var obj = [ ];  // []
 C.var obj = { };  // {} 
 
 D.var obj = / /;  // // 
+
+3.请选择结果为真的表达式：（C）
+
+A.null instanceof Object 
+
+B.null === undefined 
+
+C.null == undefined 
+
+D.NaN == NaN 
+
+>  null instanceof Object 返回值为false，typeof(null) == 'object'
+>  对于Null类型的值(只有null)，ECMAScript标准定义返回"object"这个字符串。但是本质上Null和Object不是一个数据类型，null值并不是以Object为原型创建出来的。所以null instanceof Object是false。
+>  null表示"没有对象"，即该处不应该有值。undefined表示"缺少值"，就是此处应该有一个值，但是还没有定义。实际上，undefined值是派生自null值的，ECMAScript标准规定对二者进行相等性测试要返回true.
+>  NaN == NaN  的执行结果是 false。因为JavaScript规定，NaN表示的是非数字，但是这个非数字也是不同的，因此 NaN 不等于 NaN，两个NaN永远不可能相等。
